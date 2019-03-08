@@ -131,6 +131,8 @@ public class WordCountExcludeCache
         Job job = Job.getInstance(conf, "WordCountExcludeCache");
 
         job.setJarByClass(WordCountExcludeCache.class);
+        
+        job.addCacheFile(new URI("/users/gko/WordCount/exclude.txt#file"));
 
 
         // Set mapper class to TokenizerMapper defined above
